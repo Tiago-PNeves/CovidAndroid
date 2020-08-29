@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Covid.CovidActivity">
+
+    <TableRow
+        android:id="@+id/tableRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/levelID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Level:"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/levels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:text="00"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="124dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/virusString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Virus:"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/virus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:text="00"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+    </TableRow>
+
+    <LinearLayout
+        android:id="@+id/game_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableRow">
+
+        <grupo8.isel.covid.TileLib.TilePanel
+            android:id="@+id/panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#2D5F7A"
+            app:gridLine="0"
+            app:heightTiles="9"
+            app:widthTiles="9" />
+
+    </LinearLayout>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_layout">
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="176dp"
+            android:layout_height="match_parent"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/load"
+            android:layout_width="176dp"
+            android:layout_height="match_parent"
+            android:text="@string/load" />
+
+    </TableRow>
+
+    <ImageButton
+        android:id="@+id/left"
+        android:layout_width="120dp"
+        android:layout_height="77dp"
+        android:src="@drawable/iconleft"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/right"
+        android:layout_width="120dp"
+        android:layout_height="77dp"
+        android:src="@drawable/iconright"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/ok"
+        android:layout_width="69dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:text="ok"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tableRow2"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/tableRow2"
+        app:layout_constraintEnd_toStartOf="@+id/ok"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_layout" />
+
+    <Button
+        android:id="@+id/langSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PORTUGUÊS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/right"
+        app:layout_constraintStart_toEndOf="@+id/left" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

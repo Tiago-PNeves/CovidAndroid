@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Covid</string>
+    <string name="level" />
+    <string name="Virus" />
+    <string name="label">Label</string>
+    <string name="val">#</string>
+    <string name="save">SAVE</string>
+    <string name="load">LOAD</string>
+</resources>
